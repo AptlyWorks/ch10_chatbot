@@ -6,7 +6,7 @@ if (!process.env.PINECONE_API_KEY) {
 }
 
 export const pinecone = new Pinecone({
-  apiKey: process.env.PINECONE_API_KEY,
+  apiKey: process.env.PINECONE_API_KEY!,
 });
 
 export const getPineconeIndex = () => {
@@ -47,6 +47,6 @@ export class CustomPineconeEmbeddings extends Embeddings {
       inputs: [text],
       parameters: { inputType: "query", truncate: "END" }
     });
-    return response.data[0].values || [];
+    return (response.data[0] as any).values || [];
   }
 }
