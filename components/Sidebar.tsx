@@ -27,14 +27,14 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-[#0052cc] text-lg leading-tight">
-              Review<br />Concierge
+              이기쁨의 Review<br />Concierge
             </span>
             <span className="text-xs text-gray-500">AI Assistant</span>
           </div>
         </div>
 
         {/* New Chat Button */}
-        <button 
+        <button
           className="w-full bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-lg py-3 flex items-center justify-center gap-2 mb-6 font-medium transition-colors"
           onClick={() => setActiveView("chat")}
         >
@@ -46,16 +46,15 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
         <nav className="flex flex-col gap-1">
           <button
             onClick={() => setActiveView("chat")}
-            className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
-              activeView === "chat"
+            className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors ${activeView === "chat"
                 ? "bg-[#69ffb4] text-gray-900"
                 : "text-gray-600 hover:bg-gray-100"
-            }`}
+              }`}
           >
             <MessageSquare className="w-5 h-5" />
             Previous Chats
           </button>
-          
+
           <button
             className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors"
           >
@@ -65,11 +64,10 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
 
           <button
             onClick={() => setActiveView("analytics")}
-            className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
-              activeView === "analytics"
+            className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium transition-colors ${activeView === "analytics"
                 ? "bg-[#69ffb4] text-gray-900"
                 : "text-gray-600 hover:bg-gray-100"
-            }`}
+              }`}
           >
             <BarChart2 className="w-5 h-5" />
             Analytics
@@ -86,7 +84,7 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
 
       {/* Bottom Section */}
       <div className="flex flex-col gap-1">
-        <button 
+        <button
           onClick={async () => {
             alert("데이터 인덱싱을 시작합니다. 잠시만 기다려주세요...");
             try {

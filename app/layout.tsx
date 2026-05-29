@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Review Concierge",
+  title: "이기쁨의 Review Concierge",
   description: "Shopping Review Analysis Chatbot",
 };
 
